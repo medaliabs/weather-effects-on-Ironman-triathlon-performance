@@ -108,10 +108,11 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Data files (uncomment if you don't want to track large datasets)
-# *.csv
-# *.xlsx
-# *.json
+# Data files - excluding large datasets from Git
+*.csv
+data/*.csv
+*.xlsx
+*.json
 
 # API keys and credentials
 config.py

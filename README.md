@@ -10,8 +10,9 @@ This repository contains my Master's project analyzing the relationship between 
 
 ```
 ├── data/                   # Dataset files
-│   ├── Full Ironman.csv    # Complete Ironman race data
-│   └── half Ironman 70.3.csv  # Ironman 70.3 race data
+│   ├── README.md           # Data access information
+│   ├── Full Ironman.csv    # Complete Ironman race data (72.43 MB)*
+│   └── half Ironman 70.3.csv  # Ironman 70.3 race data (162.63 MB)*
 ├── notebooks/              # Jupyter notebooks for analysis
 │   ├── Ironman_Regression_Analysis.ipynb         # Main regression analysis
 │   ├── Half_Ironman_Quantile_Regression_Analysis.ipynb  # Quantile regression
@@ -58,6 +59,8 @@ This research examines the impact of weather conditions on triathlon performance
 
 ## Getting Started
 
+⚠️ **Data Access**: Due to file size limitations, the CSV datasets are not included in this repository. Please see [`data/README.md`](data/README.md) for information on accessing the datasets.
+
 ### Prerequisites
 
 ```bash
@@ -67,9 +70,13 @@ pip install -r requirements.txt
 ### Running the Analysis
 
 1. Clone the repository
-2. Install dependencies
-3. Navigate to the `notebooks/` directory
-4. Start with `Ironman_Regression_Analysis.ipynb` for the main analysis
+2. Install dependencies: `pip install -r requirements.txt`
+3. Contact [medalielabbassi@gmail.com](mailto:medalielabbassi@gmail.com) for dataset access
+4. Place the CSV files in the `data/` directory
+5. Navigate to the `notebooks/` directory
+6. Start with `Ironman_Regression_Analysis.ipynb` for the main analysis
+
+*Note: CSV files are not included due to size (72-163 MB each). See data/README.md for access information.
 
 ## Results
 
@@ -87,7 +94,7 @@ Detailed findings and methodology are available in:
 
 ## Author
 
-Master's Project in [AI and Data Science/Sultan Moulay Sliman University]
+Master's Project in [AI and Data Science/ENSA/Sultan Moulay Sliman University]
 [Mohamed Ali Elabbassi]
 [2025]
 
