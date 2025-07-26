@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Effects on Triathlon Performance - Mohamed Ali Elabbassi</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #5a6fd8;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        .card h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: #e9ecef;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            margin-top: 3rem;
+        }
+        .author-info {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Effect of Weather Parameters on Triathlon Race Performance</h1>
+        <p class="subtitle">A comprehensive analysis using machine learning and statistical modeling</p>
+    </header>
+
+    <div class="nav-links">
+        <a href="https://github.com/medalielabbassi/triathlon-weather-analysis">GitHub Repository</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#findings">Key Findings</a>
+        <a href="#notebooks">Analysis Notebooks</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>This repository contains my Master's project analyzing the relationship between various weather parameters and triathlon race performance. The study examines how factors such as temperature, humidity, wind speed, and other meteorological conditions affect athlete performance in endurance sports.</p>
+        
+        <div class="author-info">
+            <h3>👨‍🎓 About the Author</h3>
+            <p><strong>Mohamed Ali Elabbassi</strong><br>
+            Master's Student in AI and Data Science<br>
+            Sultan Moulay Sliman University<br>
+            📧 medalielabbassi@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="container" id="methodology">
+        <h2>Methodology</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🔍 Data Collection</h3>
+                <p>Gathered comprehensive race data from Ironman and Ironman 70.3 events worldwide, including race times, weather conditions, and participant information.</p>
+            </div>
+            <div class="card">
+                <h3>🌤️ Weather Integration</h3>
+                <p>Retrieved and integrated historical weather data for race locations and dates, including temperature, humidity, wind speed, and derived metrics like WBGT.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Statistical Modeling</h3>
+                <p>Applied various machine learning and statistical techniques including regression analysis, quantile regression, and decision tree modeling.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Performance Analysis</h3>
+                <p>Analyzed weather effects across different race distances, athlete ability levels, and environmental conditions.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="findings">
+        <h2>Key Findings</h2>
+        <ul>
+            <li><strong>Regression Analysis:</strong> Linear and multiple regression models to quantify weather effects on performance</li>
+            <li><strong>Quantile Regression:</strong> Understanding performance impacts across different athlete ability levels</li>
+            <li><strong>Decision Tree Analysis:</strong> Non-linear relationship discovery between weather and performance</li>
+            <li><strong>Statistical Validation:</strong> Comprehensive statistical testing and validation of findings</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Technologies Used</h2>
+        <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">Seaborn</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Jupyter Notebooks</span>
+            <span class="tech-tag">Requests</span>
+            <span class="tech-tag">BeautifulSoup</span>
+            <span class="tech-tag">Statsmodels</span>
+        </div>
+    </div>
+
+    <div class="container" id="notebooks">
+        <h2>Analysis Notebooks</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Main Regression Analysis</h3>
+                <p>Comprehensive linear regression analysis examining weather parameter effects on race performance.</p>
+            </div>
+            <div class="card">
+                <h3>Quantile Regression</h3>
+                <p>Advanced analysis understanding performance impacts across different athlete ability percentiles.</p>
+            </div>
+            <div class="card">
+                <h3>Decision Tree Modeling</h3>
+                <p>Non-linear relationship discovery using decision tree algorithms for complex weather interactions.</p>
+            </div>
+            <div class="card">
+                <h3>Weather Data Collection</h3>
+                <p>Automated weather data retrieval and processing for historical race conditions.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Research Impact</h2>
+        <p>This analysis reveals significant relationships between weather parameters and triathlon performance, with implications for:</p>
+        <ul>
+            <li>🏁 <strong>Race Planning:</strong> Optimal scheduling and location selection for events</li>
+            <li>🏃‍♂️ <strong>Athlete Strategy:</strong> Performance prediction and preparation optimization</li>
+            <li>📊 <strong>Performance Models:</strong> Data-driven insights for competitive analysis</li>
+            <li>⚠️ <strong>Safety Considerations:</strong> Risk assessment for race organizers</li>
+        </ul>
+    </div>
+
+    <footer id="contact">
+        <p><strong>Mohamed Ali Elabbassi</strong> | Master's in AI and Data Science | Sultan Moulay Sliman University<br>
+        📧 <a href="mailto:medalielabbassi@gmail.com">medalielabbassi@gmail.com</a> | 
+        🔗 <a href="https://github.com/medalielabbassi">GitHub Profile</a></p>
+        <p><em>This project is for academic purposes. Please cite appropriately if using this work.</em></p>
+    </footer>
+</body>
+</html>
