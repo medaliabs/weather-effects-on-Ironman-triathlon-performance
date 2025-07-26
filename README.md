@@ -87,9 +87,9 @@ Detailed findings and methodology are available in:
 
 ## Author
 
-Master's Project in [Your Program/University]
-[Your Name]
-[Year]
+Master's Project in [AI and Data Science/Sultan Moulay Sliman University]
+[Mohamed Ali Elabbassi]
+[2025]
 
 ## License
 
