@@ -4,7 +4,7 @@ A comprehensive analysis of how weather conditions influence triathlon performan
 
 ## Overview
 
-This repository contains my Master's project analyzing the relationship between various weather parameters and triathlon race performance. The study examines how factors such as temperature, humidity, wind speed, and other meteorological conditions affect athlete performance in endurance sports.
+This repository contains a study analyzing the relationship between various weather parameters and triathlon race performance. The study examines how factors such as elevation, temperature, humidity, wind speed, and other meteorological conditions affect athlete performance in endurance sports.
 
 ## Project Structure
 
@@ -56,6 +56,16 @@ This research examines the impact of weather conditions on triathlon performance
 - **Matplotlib/Seaborn**: Data visualization
 - **NumPy**: Numerical computations
 - **Jupyter Notebooks**: Interactive analysis environment
+
+## AI-Assisted Development
+
+🤖 **Note**: This study utilized Large Language Models (LLMs) and AI coding agents to assist with:
+- Code generation and optimization
+- Data analysis workflow development
+- Documentation and writing improvement
+- Repository organization and structure
+
+The core research methodology, data analysis, and scientific conclusions remain the work of the author, with AI tools serving as assistive technology for implementation and presentation.
 
 ## Getting Started
 
