@@ -109,7 +109,7 @@
     </header>
 
     <div class="nav-links">
-        <a href="https://github.com/medalielabbassi/triathlon-weather-analysis">GitHub Repository</a>
+        <a href="https://github.com/medaliabs/weather-effects-on-Ironman-triathlon-performance">GitHub Repository</a>
         <a href="#methodology">Methodology</a>
         <a href="#findings">Key Findings</a>
         <a href="#notebooks">Analysis Notebooks</a>
@@ -119,6 +119,30 @@
     <div class="container">
         <h2>Project Overview</h2>
         <p>This repository contains my Master's project analyzing the relationship between various weather parameters and triathlon race performance. The study examines how factors such as temperature, humidity, wind speed, and other meteorological conditions affect athlete performance in endurance sports.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>📊 Dataset Scale</h3>
+                <p><strong>931 races</strong> analyzed<br>
+                <strong>1,480,230 athletes</strong> studied<br>
+                <strong>337 locations</strong> worldwide<br>
+                <strong>2015-2023</strong> time period</p>
+            </div>
+            <div class="card">
+                <h3>🏃‍♂️ Race Formats</h3>
+                <p><strong>318 Full Ironman</strong> races<br>
+                (548,002 athletes)<br>
+                <strong>613 Half Ironman 70.3</strong> races<br>
+                (932,228 athletes)</p>
+            </div>
+            <div class="card">
+                <h3>🌡️ Weather Range</h3>
+                <p><strong>Temperature:</strong> 9°C to 42°C<br>
+                <strong>Humidity:</strong> 6% to 100%<br>
+                <strong>Water Temp:</strong> 5°C to 30°C<br>
+                <strong>Elevation:</strong> -115m to 2408m</p>
+            </div>
+        </div>
         
         <div class="author-info">
             <h3>👨‍🎓 About the Author</h3>
@@ -152,13 +176,59 @@
     </div>
 
     <div class="container" id="findings">
-        <h2>Key Findings</h2>
-        <ul>
-            <li><strong>Regression Analysis:</strong> Linear and multiple regression models to quantify weather effects on performance</li>
-            <li><strong>Quantile Regression:</strong> Understanding performance impacts across different athlete ability levels</li>
-            <li><strong>Decision Tree Analysis:</strong> Non-linear relationship discovery between weather and performance</li>
-            <li><strong>Statistical Validation:</strong> Comprehensive statistical testing and validation of findings</li>
-        </ul>
+        <h2>Key Research Findings</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>🌤️ Weather Dominance</h3>
+                <p>Weather variables have <strong>3-5 times greater impact</strong> than elevation features across all race segments. Temperature emerged as the dominant predictor with optimal performance at:</p>
+                <ul>
+                    <li><strong>Air temperature:</strong> 19-27°C</li>
+                    <li><strong>Water temperature:</strong> 20-24°C</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🤖 Model Performance</h3>
+                <p>XGBoost models demonstrated superior predictive power:</p>
+                <ul>
+                    <li><strong>Swim segments:</strong> R² = 0.91</li>
+                    <li><strong>Bike segments:</strong> R² = 0.63</li>
+                    <li><strong>Run segments:</strong> R² = 0.68</li>
+                    <li><strong>Overall times:</strong> R² = 0.61</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>👨‍🏃‍♂️ Athlete Categories</h3>
+                <p>Professional vs. Age-group differences:</p>
+                <ul>
+                    <li>Professionals: <strong>30% less sensitivity</strong> to temperature extremes</li>
+                    <li>Stronger correlations between environmental factors and professional performance</li>
+                    <li>Age-group athletes more vulnerable to heat stress</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🏁 Race Format Differences</h3>
+                <p>Half Ironman vs. Full Ironman impacts:</p>
+                <ul>
+                    <li>Half Ironman: <strong>Higher weather-to-elevation ratios</strong></li>
+                    <li>More intense environmental effects per distance unit</li>
+                    <li>Different optimal temperature ranges by format</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #ffc107;">
+            <h3 style="color: #856404; margin-top: 0;">🔍 Quantitative Impact Analysis</h3>
+            <ul>
+                <li><strong>Temperature Effect:</strong> Every 1°C rise increases run time by ~0.91 minutes (54.65 seconds)</li>
+                <li><strong>Elevation Impact:</strong> Bike time increases by ~0.24 seconds per meter of elevation gain</li>
+                <li><strong>WBGT Correlation:</strong> Every 1 unit increase in WBGT adds 1.30 minutes to run time</li>
+                <li><strong>Weather vs Elevation Ratios:</strong> 12.3:1 (Half Ironman swim), 6.1:1 (Full Ironman swim)</li>
+            </ul>
+        </div>
     </div>
 
     <div class="container">
@@ -167,6 +237,7 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Pandas</span>
             <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">XGBoost</span>
             <span class="tech-tag">Matplotlib</span>
             <span class="tech-tag">Seaborn</span>
             <span class="tech-tag">NumPy</span>
@@ -174,6 +245,37 @@
             <span class="tech-tag">Requests</span>
             <span class="tech-tag">BeautifulSoup</span>
             <span class="tech-tag">Statsmodels</span>
+            <span class="tech-tag">Open-Meteo API</span>
+        </div>
+        
+        <div class="grid" style="margin-top: 2rem;">
+            <div class="card">
+                <h3>📈 Statistical Methods</h3>
+                <ul>
+                    <li>Linear & Multiple Regression</li>
+                    <li>Quantile Regression Analysis</li>
+                    <li>Correlation Analysis</li>
+                    <li>Descriptive Statistics</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🤖 Machine Learning</h3>
+                <ul>
+                    <li>Decision Tree Modeling</li>
+                    <li>Random Forest Analysis</li>
+                    <li>XGBoost Regression</li>
+                    <li>Feature Importance Analysis</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🌐 Data Sources</h3>
+                <ul>
+                    <li>endurance-data.com (race results)</li>
+                    <li>Open-Meteo API (weather data)</li>
+                    <li>Multi-source elevation data</li>
+                    <li>WBGT calculations</li>
+                </ul>
+            </div>
         </div>
         
         <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #2196f3;">
@@ -186,39 +288,143 @@
         <h2>Analysis Notebooks</h2>
         <div class="grid">
             <div class="card">
-                <h3>Main Regression Analysis</h3>
-                <p>Comprehensive linear regression analysis examining weather parameter effects on race performance.</p>
+                <h3>📊 Main Regression Analysis</h3>
+                <p><strong>Ironman_Regression_Analysis.ipynb</strong><br>
+                Comprehensive linear regression analysis examining weather parameter effects on Full Ironman race performance, including temperature, humidity, and elevation impacts.</p>
             </div>
             <div class="card">
-                <h3>Quantile Regression</h3>
-                <p>Advanced analysis understanding performance impacts across different athlete ability percentiles.</p>
+                <h3>📈 Quantile Regression</h3>
+                <p><strong>Half_Ironman_Quantile_Regression_Analysis.ipynb</strong><br>
+                Advanced analysis understanding performance impacts across different athlete ability percentiles for Half Ironman events.</p>
             </div>
             <div class="card">
-                <h3>Decision Tree Modeling</h3>
-                <p>Non-linear relationship discovery using decision tree algorithms for complex weather interactions.</p>
+                <h3>🌳 Decision Tree Modeling</h3>
+                <p><strong>Ironman_DecisionTree_Analysis.ipynb</strong><br>
+                Non-linear relationship discovery using decision tree algorithms and XGBoost for complex weather-performance interactions.</p>
             </div>
             <div class="card">
-                <h3>Weather Data Collection</h3>
-                <p>Automated weather data retrieval and processing for historical race conditions.</p>
+                <h3>🌤️ Weather Data Collection</h3>
+                <p><strong>weather_data_retreive_ironman.ipynb</strong><br>
+                Automated weather data retrieval from Open-Meteo API and processing for historical race conditions.</p>
+            </div>
+            <div class="card">
+                <h3>⛰️ Elevation Processing</h3>
+                <p><strong>add_elevations_final.ipynb</strong><br>
+                Multi-source web scraping methodology for venue altitude and elevation gain data collection and validation.</p>
+            </div>
+            <div class="card">
+                <h3>🌊 Water Temperature</h3>
+                <p><strong>water_temperature_estimation.ipynb</strong><br>
+                Mathematical modeling methodology for water temperature estimation with statistical validation.</p>
+            </div>
+            <div class="card">
+                <h3>🌡️ WBGT Analysis</h3>
+                <p><strong>wbgt.ipynb</strong><br>
+                Wet Bulb Globe Temperature calculation using Australian Bureau of Meteorology approach for heat stress assessment.</p>
+            </div>
+            <div class="card">
+                <h3>📋 Data Integration</h3>
+                <p><strong>concatenation.ipynb</strong><br>
+                Data merging and preparation workflow combining race results with environmental parameters.</p>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <h2>Research Impact</h2>
-        <p>This analysis reveals significant relationships between weather parameters and triathlon performance, with implications for:</p>
-        <ul>
-            <li>🏁 <strong>Race Planning:</strong> Optimal scheduling and location selection for events</li>
-            <li>🏃‍♂️ <strong>Athlete Strategy:</strong> Performance prediction and preparation optimization</li>
-            <li>📊 <strong>Performance Models:</strong> Data-driven insights for competitive analysis</li>
-            <li>⚠️ <strong>Safety Considerations:</strong> Risk assessment for race organizers</li>
-        </ul>
+        <h2>Research Impact & Applications</h2>
+        <p>This analysis reveals significant relationships between weather parameters and triathlon performance, with practical implications for multiple stakeholders:</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>🏁 Race Organizers</h3>
+                <ul>
+                    <li><strong>Optimal Scheduling:</strong> Evidence-based timing for peak performance conditions</li>
+                    <li><strong>Safety Protocols:</strong> WBGT-based risk assessment thresholds</li>
+                    <li><strong>Course Design:</strong> Balancing elevation with climate considerations</li>
+                    <li><strong>Resource Planning:</strong> Enhanced cooling strategies for high-risk conditions</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🏃‍♂️ Athletes & Coaches</h3>
+                <ul>
+                    <li><strong>Performance Prediction:</strong> Data-driven race strategy development</li>
+                    <li><strong>Training Optimization:</strong> Climate-specific preparation protocols</li>
+                    <li><strong>Race Selection:</strong> Strategic event choosing based on environmental sensitivity</li>
+                    <li><strong>Heat Adaptation:</strong> Targeted acclimatization programs</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>📊 Sports Science</h3>
+                <ul>
+                    <li><strong>Predictive Models:</strong> Advanced machine learning applications</li>
+                    <li><strong>Environmental Research:</strong> Comprehensive weather impact quantification</li>
+                    <li><strong>Performance Analysis:</strong> Segment-specific environmental effects</li>
+                    <li><strong>Comparative Studies:</strong> Format-specific environmental responses</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>⚠️ Health & Safety</h3>
+                <ul>
+                    <li><strong>Risk Assessment:</strong> Demographic-specific vulnerability identification</li>
+                    <li><strong>Heat Illness Prevention:</strong> Evidence-based safety thresholds</li>
+                    <li><strong>Medical Planning:</strong> Environmental condition-based resource allocation</li>
+                    <li><strong>Education Programs:</strong> Athlete awareness and preparation strategies</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="background: #d1ecf1; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #17a2b8;">
+            <h3 style="color: #0c5460; margin-top: 0;">🎯 Key Practical Insights</h3>
+            <ul>
+                <li><strong>Gender Differences:</strong> Female athletes show greater sensitivity to humidity and temperature variations</li>
+                <li><strong>Experience Matters:</strong> Professional athletes demonstrate 30% less sensitivity to temperature extremes</li>
+                <li><strong>Format Effects:</strong> Half Ironman events show amplified environmental impacts per distance unit</li>
+                <li><strong>Optimal Conditions:</strong> Peak performance occurs at 19-27°C air temperature and 20-24°C water temperature</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>📂 Dataset Information</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🗂️ Data Files</h3>
+                <p><strong>Full Ironman.csv</strong> (72.43 MB)<br>
+                Complete Ironman race data with weather parameters<br><br>
+                <strong>half Ironman 70.3.csv</strong> (162.63 MB)<br>
+                Ironman 70.3 race data with weather parameters</p>
+            </div>
+            
+            <div class="card">
+                <h3>📋 Data Structure</h3>
+                <ul>
+                    <li>Race information (location, date, distance)</li>
+                    <li>Weather parameters (temperature, humidity, wind)</li>
+                    <li>Performance metrics (race times, splits)</li>
+                    <li>Environmental factors (elevation, WBGT)</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>📬 Data Access</h3>
+                <p>⚠️ <strong>Note:</strong> Due to GitHub's file size limitations, CSV files are not stored in the repository.<br><br>
+                📧 <strong>Contact:</strong> <a href="mailto:medalielabbassi@gmail.com">medalielabbassi@gmail.com</a> for academic access</p>
+            </div>
+            
+            <div class="card">
+                <h3>📄 Citation</h3>
+                <p><em>Elabbassi, M. A. (2025). The Effect of Weather Parameters on Triathlon Race Performance. Master's Project, AI and Data Science, ENSA, Sultan Moulay Sliman University.</em></p>
+            </div>
+        </div>
     </div>
 
     <footer id="contact">
         <p><strong>Mohamed Ali Elabbassi</strong> | Master's in AI and Data Science | Sultan Moulay Sliman University<br>
         📧 <a href="mailto:medalielabbassi@gmail.com">medalielabbassi@gmail.com</a> | 
-        🔗 <a href="https://github.com/medalielabbassi">GitHub Profile</a></p>
+        🔗 <a href="https://github.com/medaliabs">GitHub Profile</a></p>
         <p><em>This project is for academic purposes. Please cite appropriately if using this work.</em></p>
     </footer>
 </body>
